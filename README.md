@@ -5,7 +5,7 @@ Para instalar pluggins necesitamos de un gestor este lo instalamos con:
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-En el archivo de .init para agregar los pluggins pondremos:
+En el archivo de .init ubicado en(~/.config/nvim/init.vim) para agregar los pluggins pondremos:
 
 call plug#begin()
 
