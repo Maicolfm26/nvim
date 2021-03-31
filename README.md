@@ -20,3 +20,9 @@ Y para Instalar el pluggin pondremos:
 :PlugInstall
 
 Y eso es todo.
+
+Para los iconos hay que instalar una fuente:
+
+mkdir -p ~/.local/share/fonts
+
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
