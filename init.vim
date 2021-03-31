@@ -27,13 +27,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 "configuracion de tema
-colorscheme molokai
-let g:molokai_original = 1
 let g:rehash256 = 1
-set background=dark
+let g:molokai_original = 1
+colorscheme molokai
 
 "configuracion de gestor de archivos
 let NERDTreeQuitOnOpen=1
@@ -50,6 +50,7 @@ nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>wq :wq<CR>
 nmap <S-t> :vnew<CR>:term<CR>
+nmap <leader>lt :TagbarToggle<CR>
 
 nnoremap <leader>e :e $MYVIMRC<CR>
 nnoremap <C-Left> :tabprevious<CR>
