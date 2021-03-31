@@ -11,41 +11,47 @@ set clipboard=unnamedplus  " Nos permite copiar al portapapeles
 syntax enable
 set showcmd
 set ruler
-set encoding=utf-8  " Indicamos la tipografia en este utf-8
+set encoding=UTF-8
 set showmatch  " para resaltar el corchete de cierre
 set relativenumber  " ponemos los numeros relativos para poder movernos con mas facilidad
-set laststatus=2
 set splitright  " para abrir un archivo en una ventana dividido verticalmente a la derecha
+set autoindent
 
 call plug#begin('~/.vim/plugged')
-
-"Temas
-
-Plug 'morhetz/gruvbox'
-
 " IDE
-Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'easymotion/vim-easymotion' "para hacer busquedas con espacio + s
+Plug 'scrooloose/nerdtree' "Plugin para el gestor de archivos
+Plug 'christoomey/vim-tmux-navigator' "Para poder navegar entre las ventanas o terminales
+Plug 'preservim/nerdcommenter' "Para comentar con espacio + cc o descomentar con espacio + cu
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 call plug#end()
 
+"configuracion de tema
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 set background=dark
 
+"configuracion de gestor de archivos
 let NERDTreeQuitOnOpen=1
-
 let mapleader=" "
+
+"configuracion de airline
+source $HOME/.vim/themes/airline.vim
+set laststatus=2
+set t_Co=256
 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>wq :wq<CR>
+nmap <S-t> :vnew<CR>:term<CR>
 
-map <S-t> :vert :term<CR>
 nnoremap <leader>e :e $MYVIMRC<CR>
 nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>  
+nnoremap <C-Right> :tabnext<CR>
+tnoremap <Esc> <C-\><C-n>
