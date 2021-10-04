@@ -63,4 +63,4 @@ set noshowmode
 
 Para instalar ctags:
 
-sudo apt install universal-ctag
+sudo apt install universal-ctags
