@@ -18,6 +18,8 @@ set splitright  " para abrir un archivo en una ventana dividido verticalmente a 
 set autoindent
 
 call plug#begin('~/.vim/plugged')
+" Temas
+Plug 'tomasr/molokai'
 " IDE
 Plug 'easymotion/vim-easymotion' "para hacer busquedas con espacio + s
 Plug 'scrooloose/nerdtree' "Plugin para el gestor de archivos
